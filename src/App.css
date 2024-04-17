@@ -1,0 +1,93 @@
+
+::-webkit-scrollbar {
+  width: 15px;
+  opacity: 0.4;
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(191, 191, 191);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(170, 170, 170);
+}
+
+.bubbleWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: bubbleAnim 1.5s forwards infinite;
+}
+
+.bubbleWrapper:hover .bubble {
+  animation-name: bubbleAnimHover;
+}
+
+@keyframes bubbleAnim {
+  0% {
+    transform: translateY(100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes bubbleAnimHover {
+  0% {
+    transform: translateY(100%);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.icon-hover:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-image {
+  transform: translateY(-20%);
+  will-change: transform;
+  transition: transform 0.3s ease-in-out;
+}
