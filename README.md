@@ -1,6 +1,6 @@
 # My own portfolio source code
 
-The portfolio was coded in Typescript. Documentations are in Markdown.
+The portfolio was coded in Typescript. Documentations are in Markdown. This portfolio was used for a BTS SIO SISR.
 
 ![Preview](./Preview.gif)
 
